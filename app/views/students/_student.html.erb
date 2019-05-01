@@ -1,11 +1,7 @@
-<h1><%=@student.name%> </h1>
 <ul>
-  <% @students.each do |s| %>
-    <li>Name: <%= s.name%> </li>
+    <li>Name: <%= link_to s.name, student_path(s)%> </li>
     <li>Heritage: <%= s.heritage %> </li>
     <li>Alive: <%= s.alive%> </li>
     <li>Patronus: <%= s.patronus%> </li>
     <li>Classes: <%= s.klasses_names %> </li>
-    <br>
-  <% end %>
 </ul>
