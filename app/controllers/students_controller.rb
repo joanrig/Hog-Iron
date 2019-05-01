@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
   def index
-    @students = Student.all
+    @students = Student.all.sort_by(&:name)
   end
 
   def new
@@ -33,7 +33,7 @@ class StudentsController < ApplicationController
       render :edit
     end
   end
-  
+
   def destroy
     Student.find(params[:id]).destroy
     redirect_to students_path
