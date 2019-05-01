@@ -1,5 +1,5 @@
 ##To-Do's
--Views setup /
+-Views setup
 -Views helpers: lab refactoring views with helpers?
 link: https://learn.co/tracks/online-software-engineering-full-time/rails/refactoring-with-helpers-and-model-methods/refactoring-views-with-helpers
 
@@ -8,10 +8,9 @@ link: https://learn.co/tracks/online-software-engineering-full-time/rails/refact
 -Validations
 -Log in via Google/ facebook
 -Password Authentication
+-next meeting 10am PST May 1
 
 
-## May 1
-Bryn
 
 ##April 30th
 -Corrected seeds.rb files
