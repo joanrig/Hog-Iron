@@ -1,0 +1,14 @@
+<%= form_for student do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name%>
+  <br>
+  <%= f.label :heritage %>
+  <%= f.select :heritage, Student.heritages %>
+  <br>
+  <%= f.label :alive, "Alive at End of Book Series?" %>
+  <%= f.check_box :alive%>
+  <br>
+  <%= f.label :klasses_names, "Classes" %>
+  <%= f.collection_select :klasses, Klass.all, :id, :name%>
+  <br>
+<% end %>

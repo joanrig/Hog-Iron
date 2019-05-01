@@ -10,6 +10,8 @@ link: https://learn.co/tracks/online-software-engineering-full-time/rails/refact
 -Password Authentication
 
 
+## May 1
+Bryn
 
 ##April 30th
 -Corrected seeds.rb files
