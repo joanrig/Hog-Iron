@@ -8,7 +8,11 @@
   <%= f.label :alive, "Alive at End of Book Series?" %>
   <%= f.check_box :alive%>
   <br>
-  <%= f.label :klasses_names, "Classes" %>
-  <%= f.collection_select :klasses, Klass.all, :id, :name%>
+  <%= f.label :patronus %>
+  <%= f.text_field :patronus%>
   <br>
+  <%= f.label :klasses, "Classes" %>
+  <%= f.collection_check_boxes :klasses, Klass.all, :id, :name%>
+  <br>
+  <%= f.submit %>
 <% end %>
