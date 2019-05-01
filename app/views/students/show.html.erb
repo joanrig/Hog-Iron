@@ -1,11 +1,5 @@
 <h1><%=@student.name%> </h1>
-<ul>
-  <% @students.each do |s| %>
-    <li>Name: <%= s.name%> </li>
-    <li>Heritage: <%= s.heritage %> </li>
-    <li>Alive: <%= s.alive%> </li>
-    <li>Patronus: <%= s.patronus%> </li>
-    <li>Classes: <%= s.klasses_names %> </li>
-    <br>
-  <% end %>
-</ul>
+<%= render partial: 'student', locals: { s: @student }%>
+
+<%= button_to "Edit Student",  edit_student_path(@student)%>
+<%= button_to "Delete Student",  student_path(@student), method: :delete%>
