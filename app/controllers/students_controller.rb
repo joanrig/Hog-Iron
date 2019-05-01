@@ -8,6 +8,7 @@ class StudentsController < ApplicationController
   end
 
   def create
+
     @student = Student.new(student_params)
     if @student.valid?
       @student.save
@@ -42,7 +43,7 @@ class StudentsController < ApplicationController
   private
 
   def student_params
-    params.require(:student).permit(:name, :heritage, :alive, :patronus, :klasses)
+    params.require(:student).permit(:name, :heritage, :alive, :patronus, klass_ids: [])
     #left out age and pet for now
   end
 end
