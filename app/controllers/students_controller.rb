@@ -42,7 +42,7 @@ class StudentsController < ApplicationController
   private
 
   def student_params
-    params.require(:student).permit(:name, :heritage, :alive, :patronus)
+    params.require(:student).permit(:name, :heritage, :alive, :patronus, :klasses)
     #left out age and pet for now
   end
 end
