@@ -12,14 +12,20 @@ harry = Student.create(name: "Harry Potter", heritage:"Wizard", alive:true, patr
 ron = Student.create(name: "Ron Weasley", heritage:"Wizard", alive:true, patronus:"Jack Russell Terrier")
 hermione = Student.create(name: "Hermione Granger", heritage:"Muggle-Borned", alive:true, patronus:"Otter")
 
-
-#Klasses
-potions = Klass.create(name: "Potions")
-transfiguration = Klass.create(name: "Transfiguration")
-herbology = Klass.create(name: "Herbology")
-
 #Teachers
 snape = Teacher.create(name: "Severus Snape")
 minerva = Teacher.create(name: "Minerva McGonagall")
-dumbledore = Teacher.create(name: "Albus Dumbledore")
 sprout = Teacher.create(name: "Pomona Sprout")
+dumbledore = Teacher.create(name: "Albus Dumbledore")
+
+
+#Klasses
+potions = Klass.create(name: "Potions", teacher_id: 1)
+transfiguration = Klass.create(name: "Transfiguration", teacher_id: 2)
+herbology = Klass.create(name: "Herbology", teacher_id: 3)
+
+
+#Associations
+potions.students << [harry, ron, hermione]
+transfiguration.students << [harry, ron, hermione]
+herbology.students << [harry, ron, hermione]

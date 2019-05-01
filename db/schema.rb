@@ -28,12 +28,13 @@ ActiveRecord::Schema.define(version: 2019_04_30_180217) do
   end
 
   create_table "students", force: :cascade do |t|
-    t.string "name" 
-    t.integer "age" 
+    t.string "name"
+    t.integer "age"
     t.string "heritage"
     t.string "pet"
     t.boolean "alive"
     t.string "patronus"
+    t.integer "house_id"
     t.integer "team_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -41,7 +42,6 @@ ActiveRecord::Schema.define(version: 2019_04_30_180217) do
 
   create_table "teachers", force: :cascade do |t|
     t.string "name"
-    t.integer "klass_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
