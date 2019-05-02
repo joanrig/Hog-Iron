@@ -1,0 +1,6 @@
+<h1><%=@student.name%> </h1>
+<%= render partial: 'student', locals: { s: @student }%>
+
+
+<%= button_to "Edit Student",  edit_student_path(@student), method: :get%>
+<%= button_to "Delete Student",  student_path(@student), method: :delete%>
